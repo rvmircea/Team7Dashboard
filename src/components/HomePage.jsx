@@ -1,13 +1,7 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
 
-const HomePage = ({user}) => {
-    
-    return (
-        <div>
-            {user ? user.Email : "Homepage"}
-        </div>
-    )
-}
+const HomePage = ({ user }) => {
+  return <div>{user ? user.Email + user.Groups  : "Homepage"}</div>;
+};
 
-export default HomePage
+export default HomePage;
