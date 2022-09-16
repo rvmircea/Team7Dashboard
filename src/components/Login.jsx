@@ -1,26 +1,29 @@
 import { React, useState } from "react";
 import { TrainingData } from "../data";
 import HomePage from "./HomePage";
+import HomePageManager from "./HomePageManager";
+
 import classes from "./Login.module.css";
 
-const Login = () => {
+const Login = ({loggedIn,setLoggedIn}) => {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState();
-
+  const [userOrManager, setUserOrManager] = useState(true);
   const btnHandler = (e) => {
     e.preventDefault();
+    setLoggedIn((prev) => !prev)
     let user1 = TrainingData.find((td) => td.Email === username);
 
     if (user1 !== undefined) {
       setUser(user1);
     } else {
-      setUser("Nu a fost gasit");
+      setUserOrManager(false);
     }
   };
 
   return (
     <div className={classes.login}>
-      {!user && (
+      { (!user && userOrManager && !loggedIn) && (
         <form>
           <div className={classes.control}>
             <label>Email</label>
@@ -36,8 +39,10 @@ const Login = () => {
           </button>
         </form>
       )}
+      {
+        userOrManager ? <HomePage user={user} loggedIn={loggedIn} setLoggedIn={setLoggedIn}  /> : <HomePageManager setLoggedIn={setLoggedIn} loggedIn={loggedIn} />
+      }
 
-      <HomePage user={user} />
     </div>
   );
 };

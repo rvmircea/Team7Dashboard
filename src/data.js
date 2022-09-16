@@ -179,7 +179,7 @@ const VirtualAttendance = [
     },
   
     {
-        Email: "johndoe1@del2.com",
+        Email: "johndoe2@dell.com",
         NewCoursesEnrolled : 52,
         NewCoursesStarted : 29,
         MinutesVideoConsumed : 2295.5,
