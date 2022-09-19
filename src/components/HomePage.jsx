@@ -23,7 +23,7 @@ const HomePage = ({ user, loggedIn }) => {
   return (
     <>
       { (user && loggedIn) &&
-        <div>
+        <div className={classes.details}>
           <p style={pStyle}>Hello, {user.Email.substring(0, user.Email.length - 9)}</p>
           <div>
             <p className={classes.p}>New Courses Enrolled:  <span style={spanStyle}>{user.NewCoursesEnrolled} courses</span></p>

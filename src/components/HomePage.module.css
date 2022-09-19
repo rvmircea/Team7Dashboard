@@ -1,3 +1,11 @@
+.details {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    margin: auto;
+    z-index: 10;
+}
+
 p{
     color: black;
     margin-top: 24px;
