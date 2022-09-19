@@ -8,13 +8,15 @@ const HomePage = ({ user, loggedIn }) => {
     fontWeight: "bold",
     fontSize: "24px",
     color: "#3287c1",
-    marginBottom: "48px"
+    marginBottom: "48px",
+    marginTop: "32px",
   }
 
   const spanStyle = {
     marginLeft: "auto",
     marginRight: "6px",
-    color: "#3287c1"
+    color: "#3287c1",
+    textDecoration: "underline"
   }
   
 

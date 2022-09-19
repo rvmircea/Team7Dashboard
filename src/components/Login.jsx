@@ -6,7 +6,12 @@ import loginImg from './login.png';
 
 import classes from "./Login.module.css";
 
-const Login = ({loggedIn,setLoggedIn}) => {
+const Login = ({ loggedIn, setLoggedIn }) => {
+
+  const divFlexContainer = {
+    display: "flex",
+  }
+
   const [username, setUsername] = useState("");
   const [user, setUser] = useState();
   const [userOrManager, setUserOrManager] = useState(true);
@@ -27,8 +32,10 @@ const Login = ({loggedIn,setLoggedIn}) => {
     //   <img src={loginImg} width="300" style={{ position: 'relative' }} alt="login" />
     // </div>
     <>
-    <div className={classes.login}>
-    <img className = {classes.loginImage} src={loginImg} alt="login" />
+      <div className={classes.login}>
+        <div style={divFlexContainer}>
+          <img className={classes.loginImage} src={loginImg} alt="login" />
+        </div>
         {(!user && userOrManager && !loggedIn) && (
           <form>
             <div className={classes.control}>
