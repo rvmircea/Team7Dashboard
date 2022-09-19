@@ -10,17 +10,69 @@ const StudentDetails = ({ user, setShow }) => {
   };
   return (
     <div className={classes["student-details"]}>
-      <span>{user.Email}</span>
+      <p2>{user.Email}</p2>
 
-      <button style={{ marginLeft: "12px" }} onClick={() => btnHandler()}>
+      <button onClick={() => btnHandler()}>
         {!isClicked ? <span>Show details</span> : <>Hide details</>}
       </button>
-      <div>
+      <div className={classes.details}>
         {isClicked && (
           <div>
-            <p>Courses Enrolled {user.NewCoursesEnrolled}</p>
-            <p>Courses Started {user.NewCoursesStarted}</p>
-            <p>MinutesVideoConsumed {user.MinutesVideoConsumed}</p>
+            <table>
+              <tr>
+                <td>
+                  Courses Enrolled <span>{user.NewCoursesEnrolled}</span>
+                </td>
+                <td>
+                  Deactivated<span>{String(user.Deactivated)}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Courses Started<span> {user.NewCoursesStarted}</span>
+                </td>
+                <td>
+                  SupervisorName<span> {user.SupervisorName}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  MinutesVideoConsumed<span> {user.MinutesVideoConsumed}</span>
+                </td>
+                <td>
+                  MgrName<span> {user.MgrName}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  DateJoined
+                  <span> {user.DateJoined.toLocaleDateString("en-GB")}</span>
+                </td>
+                <td>
+                  L5MgrName<span> {user.L5MgrName}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  DateOfLastActivity
+                  <span>
+                    {" "}
+                    {user.DateOfLastActivity.toLocaleDateString("en-GB")}
+                  </span>
+                </td>
+                <td>
+                  WorkCountry<span> {user.WorkCountry}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Groups<span> {user.Groups}</span>
+                </td>
+                <td>
+                  WorkRegion<span> {user.WorkRegion}</span>
+                </td>
+              </tr>
+            </table>
           </div>
         )}
       </div>

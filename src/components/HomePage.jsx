@@ -26,11 +26,11 @@ const HomePage = ({ user, loggedIn }) => {
         <div className={classes.details}>
           <p style={pStyle}>Hello, {user.Email.substring(0, user.Email.length - 9)}</p>
           <div>
-            <p className={classes.p}>New Courses Enrolled:  <span style={spanStyle}>{user.NewCoursesEnrolled} courses</span></p>
+            <p1 className={classes.p}>New Courses Enrolled:  <span style={spanStyle}>{user.NewCoursesEnrolled} courses</span></p1>
           
-            <p>New Courses Started: <span style={spanStyle}> {user.NewCoursesStarted} courses</span></p>
+            <p1>New Courses Started: <span style={spanStyle}> {user.NewCoursesStarted} courses</span></p1>
           
-            <p>Minutes Video Consumed: <span style={spanStyle}>{user.MinutesVideoConsumed} minutes</span></p>
+            <p1>Minutes Video Consumed: <span style={spanStyle}>{user.MinutesVideoConsumed} minutes</span></p1>
             <Courses user={user}/>
           </div>
         </div>}
