@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { TrainingData } from "../data";
 import HomePage from "./HomePage";
 import HomePageManager from "./HomePageManager";
+import loginImg from './login.png';
 
 import classes from "./Login.module.css";
 
@@ -22,28 +23,30 @@ const Login = ({loggedIn,setLoggedIn}) => {
   };
 
   return (
+    // <><div className={classes.loginImg}>
+    //   <img src={loginImg} width="300" style={{ position: 'relative' }} alt="login" />
+    // </div>
+    <>
     <div className={classes.login}>
-      { (!user && userOrManager && !loggedIn) && (
-        <form>
-          <div className={classes.control}>
-            <label>Email</label>
-            <input
-              type={"text"}
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
+    <img className = {classes.loginImage} src={loginImg} alt="login" />
+        {(!user && userOrManager && !loggedIn) && (
+          <form>
+            <div className={classes.control}>
+              <label>Email</label>
+              <input
+                type={"text"}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)} />
+            </div>
 
-          <button className={classes.button} onClick={(e) => btnHandler(e)}>
-            Login
-          </button>
-        </form>
-      )}
-      {
-        userOrManager ? <HomePage user={user} loggedIn={loggedIn} setLoggedIn={setLoggedIn}  /> : <HomePageManager setLoggedIn={setLoggedIn} loggedIn={loggedIn} />
-      }
+            <button className={classes.button} onClick={(e) => btnHandler(e)}>
+              Login
+            </button>
+          </form>
+        )}
+        {userOrManager ? <HomePage user={user} loggedIn={loggedIn} setLoggedIn={setLoggedIn} /> : <HomePageManager setLoggedIn={setLoggedIn} loggedIn={loggedIn} />}
 
-    </div>
+      </div></>
   );
 };
 
