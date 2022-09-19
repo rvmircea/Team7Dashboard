@@ -1,6 +1,6 @@
 .login {
-  width: 90%;
-  max-width: 40rem;
+  width: 100%;
+  max-width: 60rem;
   margin: 2rem auto;
   padding: 2rem;
   background: white;
@@ -9,14 +9,13 @@
   margin-top: 10rem;
 }
 
-.loginImage {
-
-  width : 40%;
+.login form,
+.login img {
+  width: 40%;
   height: 40%;
   position: relative;
   margin: auto;
   z-index: 10;
-  
 }
 
 .control {
@@ -29,6 +28,7 @@
 .control label,
 .control input {
   display: block;
+  width: 100%;
 }
 
 .control label {
@@ -48,8 +48,8 @@
 
 .button {
   font: inherit;
-  border: 1px solid #0076CE;
-  background: #0076CE;
+  border: 1px solid #0076ce;
+  background: #0076ce;
   color: white;
   padding: 0.75rem 3.5rem;
   cursor: pointer;
@@ -59,11 +59,6 @@
 
 .button:hover,
 .button:active {
-  background: #00447C;
-  border-color: #00447C;
+  background: #00447c;
+  border-color: #00447c;
 }
-
-.button:focus {
-  outline: none;
-}
-

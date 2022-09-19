@@ -18,7 +18,6 @@ const StudentDetails = ({ user, setShow }) => {
       <div>
         {isClicked && (
           <div>
-            More details:
             <p>Courses Enrolled {user.NewCoursesEnrolled}</p>
             <p>Courses Started {user.NewCoursesStarted}</p>
             <p>MinutesVideoConsumed {user.MinutesVideoConsumed}</p>

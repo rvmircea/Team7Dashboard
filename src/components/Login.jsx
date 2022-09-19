@@ -31,7 +31,7 @@ const Login = ({ loggedIn, setLoggedIn }) => {
     <>
       <div className={classes.login}>
         <div style={divFlexContainer}>
-          <img className={classes.loginImage} src={loginImg} alt="login" />
+          <img src={loginImg} alt="login" />
         </div>
         {(!user && userOrManager && !loggedIn) && (
           <form>
