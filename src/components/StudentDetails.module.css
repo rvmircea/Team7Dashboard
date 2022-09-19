@@ -2,7 +2,7 @@
   margin-left: auto;
   font: inherit;
   border: 3px white;
-  background: #3287c1;
+  background: #0076CE;
   color: white;
   padding: 0.5rem 2rem;
   cursor: pointer;
@@ -10,10 +10,13 @@
   margin-bottom: 3px;
 }
 
-.student-details span {
-  color: "#3287c1";
-  font-size: "24px";
+.student-details button:hover,
+.student-details button:active {
+  background: #00447C;
+  border-color: #00447C;
 }
+
+
 
 .details {
   border-color: blue;

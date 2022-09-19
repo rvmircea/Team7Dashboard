@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #3287c1;
+  background: #0076CE;
   padding: 0 2rem;
   z-index: 20;
 }
@@ -23,11 +23,15 @@
 .main-header button {
   margin-left: auto;
   font: inherit;
-  border: 1px solid #3287c1;
-  background: #3287c1;
+  border: 1px solid #0076CE;
+  background: #0076CE;
   color: white;
   padding: 0.75rem 3.5rem;
   cursor: pointer;
   font-size: 1.15rem;
-  border-radius: 30px;
+  
+}
+
+.main-header button:hover {
+  background-color: #00447C;
 }

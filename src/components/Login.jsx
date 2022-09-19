@@ -28,9 +28,6 @@ const Login = ({ loggedIn, setLoggedIn }) => {
   };
 
   return (
-    // <><div className={classes.loginImg}>
-    //   <img src={loginImg} width="300" style={{ position: 'relative' }} alt="login" />
-    // </div>
     <>
       <div className={classes.login}>
         <div style={divFlexContainer}>
