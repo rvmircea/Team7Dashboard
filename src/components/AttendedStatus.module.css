@@ -1,10 +1,17 @@
 .buttonStyle{
-    background-color: "white";
-    border:"1px solid #C8C9C7"; 
-    border-radius:"16px";
-    margin-left: "8px"
+    background-color:  #FFF;
+    border: none;
+    margin-left: 4px;
+}
+.buttonStyle:hover{
+    cursor: pointer;
 }
 
-.buttonStyle:hover{
-    background-color:  #6EA204;
+.iconStyle{
+    width: 20px;
+    height: 20px;
+}
+
+.iconStyle:hover{
+    stroke: #6EA204;
 }
