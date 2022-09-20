@@ -3,10 +3,14 @@ import { TrainingData } from "../data";
 import HomePage from "./HomePage";
 import HomePageManager from "./HomePageManager";
 import loginImg from './login.png';
+import { useNavigate } from "react-router-dom";
 
 import classes from "./Login.module.css";
 
 const Login = ({ loggedIn, setLoggedIn }) => {
+
+
+  const navigate = useNavigate()
 
   const divFlexContainer = {
     display: "flex",
@@ -17,12 +21,17 @@ const Login = ({ loggedIn, setLoggedIn }) => {
   const [userOrManager, setUserOrManager] = useState(true);
   const btnHandler = (e) => {
     e.preventDefault();
-    setLoggedIn((prev) => !prev)
+    setLoggedIn((prev) => !prev);
+
+    if(username.length === 0){
+      navigate("/error");
+    }
+
     let user1 = TrainingData.find((td) => td.Email === username);
 
     if (user1 !== undefined) {
       setUser(user1);
-    } else {
+    } else{
       setUserOrManager(false);
     }
   };
@@ -40,7 +49,8 @@ const Login = ({ loggedIn, setLoggedIn }) => {
               <input
                 type={"text"}
                 value={username}
-                onChange={(e) => setUsername(e.target.value)} />
+                onChange={(e) => setUsername(e.target.value)}
+                required />
             </div>
 
             <button className={classes.button} onClick={(e) => btnHandler(e)}>
